@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Babel 7 typescript",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "type-check": "tsc",
+    "type-check:watch": "tsc --watch"
   },
   "license": "MIT",
   "dependencies": {
