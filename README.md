@@ -1,5 +1,5 @@
 # react-ts-babel7
-This repository is a example how to use Typescript/React/Babel 7
+This repository is a simple example how to use Typescript/React/Babel 7
 
 ### Install dependencies
 `yarn install`
