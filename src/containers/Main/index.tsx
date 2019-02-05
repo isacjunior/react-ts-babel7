@@ -1,24 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-type Props = {
-  message?: 'Hello' | 'Olá'
+type WelcomeProps = {
+  message: string
 }
 
-class App extends Component<Props> {
+const Welcome: React.SFC<WelcomeProps> = ({ message }) => <h1>Hello, {message}</h1>
 
-  static defaultProps = {
-    message: 'Hello TypeScript'
-  }
-
-  render() {
-    const { message } = this.props
-  
-    return (
-      <div>
-        {message}
-      </div>
-    )
-  }
-}
-
-export default App
+export default Welcome

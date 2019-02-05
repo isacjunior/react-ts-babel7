@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from 'containers/Main'
+import Welcome from 'containers/Main'
 
 render(
-  <App />,
+  <Welcome message="Typescript + Babel" />,
   document.getElementById('root'),
 )
