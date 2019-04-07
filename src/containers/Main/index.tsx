@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 type WelcomeProps = {
   message: string
 }
 
-const Welcome: React.SFC<WelcomeProps> = ({ message }) => <h1>Hello, {message}</h1>
+const Welcome: FC<WelcomeProps> = ({ message }) => <h1>Hello, {message}</h1>
 
 export default Welcome
