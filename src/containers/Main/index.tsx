@@ -1,9 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-type WelcomeProps = {
-  message: string
+interface WelcomeProps {
+  message: string,
 }
 
-const Welcome: FC<WelcomeProps> = ({ message }) => <h1>Hello, {message}</h1>
+const Welcome = ({ message }: WelcomeProps): JSX.Element =>
+  <h1>Hello, {message}</h1>
 
 export default Welcome
