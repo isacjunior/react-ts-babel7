@@ -16,10 +16,6 @@ module.exports = {
     'ecmaVersion': 2018,
     'sourceType': 'module'
   },
-  'plugins': [
-    'react',
-    '@typescript-eslint'
-  ],
   'rules': {
     "comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/type-annotation-spacing": ["error", { "before": false, "after": true, overrides: { arrow: { before: true, after: true }} }],
