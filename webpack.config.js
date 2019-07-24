@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { name } = require('./package.json')
 
 module.exports = {
 
@@ -10,7 +12,7 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    main: './src/index.tsx',
+    [`${name}-main`]: './src/index.tsx',
   },
 
   output: {
@@ -41,14 +43,8 @@ module.exports = {
 
   optimization: {
     splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /node_modules/,
-          name: 'vendor',
-          chunks: 'initial',
-          enforce: true,
-        },
-      },
+      chunks: 'all',
+      name: `${name}-vendor`,
     },
   },
 
@@ -57,6 +53,7 @@ module.exports = {
       title: 'React Typescript Babel 7',
       template: './src/index.html',
     }),
+    new CleanWebpackPlugin(),
   ],
 
 }
